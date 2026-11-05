@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Alphabet Adventure</title>
+  <meta name="theme-color" content="#4FC3E8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ABC">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="shared/ui.css">
+  <link rel="stylesheet" href="games/island/island.css">
+  <link rel="stylesheet" href="games/bubble-pop/bubble-pop.css">
+  <link rel="stylesheet" href="games/peekaboo/peekaboo.css">
+  <link rel="stylesheet" href="games/trace/trace.css">
+  <link rel="stylesheet" href="games/stickers/stickers.css">
+  <link rel="stylesheet" href="parents/parents.css">
+</head>
+<body>
+  <script src="shared/data.js"></script>
+  <script src="shared/strokes.js"></script>
+  <script src="shared/engine.js"></script>
+  <script src="shared/round.js"></script>
+  <script src="shared/trace-match.js"></script>
+  <script src="shared/clips.js"></script>
+  <script src="shared/backup.js"></script>
+  <script src="shared/storage.js"></script>
+  <script src="shared/voice.js"></script>
+  <script src="shared/art.js"></script>
+  <script src="shared/stickers-art.js"></script>
+  <script src="shared/buddy.js"></script>
+  <script src="shared/celebrate.js"></script>
+  <script src="games/island/island.js"></script>
+  <script src="games/bubble-pop/bubble-pop.js"></script>
+  <script src="games/peekaboo/peekaboo.js"></script>
+  <script src="games/trace/trace.js"></script>
+  <script src="games/stickers/stickers.js"></script>
+  <script src="parents/parents.js"></script>
+  <script src="parents/setup.js"></script>
+  <script src="parents/studio.js"></script>
+  <script src="parents/progress-view.js"></script>
+  <script src="parents/settings.js"></script>
+  <script src="shared/app.js"></script>
+  <script>
+    // Offline support only works from a web address, not a double-clicked file.
+    if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+    }
+  </script>
+</body>
+</html>

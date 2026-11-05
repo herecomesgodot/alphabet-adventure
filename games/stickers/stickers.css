@@ -1,0 +1,48 @@
+.toybox { background: #FAEEDA; }
+.toybox-confetti i { position: absolute; width: 2.2vmin; height: 2.2vmin; border-radius: 3px; opacity: .55; }
+
+.book {
+  position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
+  width: min(78vw, 120vmin); height: min(72vh, 78vmin);
+  background: #fff; border-radius: 28px; box-shadow: 0 8px 0 rgba(0,0,0,.08);
+  border: 6px solid #FFD23F; padding: 3vmin;
+}
+@media (orientation: portrait) {
+  .book { width: 84vw; height: 66vh; top: 50%; }
+}
+.book-page {
+  width: 100%; height: 100%;
+  display: grid; gap: 3vmin; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 1fr);
+}
+@media (orientation: portrait) {
+  .book-page { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 1fr); }
+}
+.sticker-spot {
+  position: relative; border-radius: 22px; min-height: 0; min-width: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.sticker-spot.empty { border: 4px dashed #E6DCCB; }
+.sticker-spot.earned { background: #FFF8E7; border: 4px solid #fff; box-shadow: 0 4px 0 rgba(0,0,0,.08); padding: 8%; }
+.sticker-spot.earned:nth-child(odd) { transform: rotate(-3deg); }
+.sticker-spot.earned:nth-child(even) { transform: rotate(2.5deg); }
+.sticker-svg { width: 100%; height: 100%; }
+.sticker-letter {
+  position: absolute; right: -6px; top: -6px; width: 30%; max-width: 54px; aspect-ratio: 1;
+  background: #EF476F; border-radius: 50%; padding: 6%;
+}
+.sticker-letter svg { width: 100%; height: 100%; }
+
+.book-arrow { position: absolute; top: 52%; transform: translateY(-50%); z-index: 5; }
+.book-prev { left: calc(10px + var(--safe-l)); }
+.book-next { right: calc(10px + var(--safe-r)); }
+@media (orientation: portrait) {
+  .book-arrow { top: auto; bottom: calc(10px + var(--safe-b)); transform: none; }
+}
+.book-dots { position: absolute; left: 0; right: 0; bottom: calc(2.4vh + var(--safe-b)); display: flex; justify-content: center; gap: 10px; }
+.book-dots span { width: 12px; height: 12px; border-radius: 50%; background: #E6DCCB; }
+.book-dots span.on { background: #EF476F; }
+.book-jar {
+  position: absolute; right: calc(14px + var(--safe-r)); top: calc(8px + var(--safe-t));
+  width: min(11vmin, 70px); height: min(13vmin, 84px);
+}
+.book-jar svg { width: 100%; height: 100%; }
